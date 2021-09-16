@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Linguagem Javascript</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Linguagem JavaScript</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h4>Características</h4>
+                <ul>
+                    <li>Linguagem de Programação</li>
+                    <li>Linguagem Interpretada</li>
+                    <li>Originalmente criado como uma linguagem front-end, ou seja, ele era interpretado e executado
+                        no cliente (Navegador)</li>
+                    <li>Também pode ser executado no back-end através do NodeJs</li>
+                    <li>É case-sensitive</li>
+                    <li>Fracamente tipada, pode ser tipada se programada com "TypeScript"</li>
+                    <li>Sintaxe similar com a linguagem C, Java</li>
+                    <li>Estruturada, orientada a objetos</li>
+                </ul>
+                <button onclick="start()" class="btn btn-danger">Clique aqui para ver o poder do JS</button>
+
+                <hr>
+
+                <div class="card-columns">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Idade
+                            </h5>
+                            <form>
+                                <div class="form-group">
+                                    <input id="inputIdade" class="form-control"
+                                        placeholder="Digite seu ano de nascimento">
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" onclick="idade()" class="btn btn-danger">Calcular</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-footer">
+                            <h5 id="H5Idade"> . . . </h5>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Criar Botões
+                            </h5>
+                            <form>
+                                <div class="form-group">
+                                    <button type="button" onclick="criarBtn()" class="btn btn-danger">Criar</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-footer" id="divBtn">
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Calculadora
+                            </h5>
+                            <form>
+                                <div class="form-group">
+                                    <input id="inputVal1" class="form-control" placeholder="Valor 1">
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control" id="op">
+                                        <option>+</option>
+                                        <option>-</option>
+                                        <option>*</option>
+                                        <option>/</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input id="inputVal2" class="form-control" placeholder="Valor 2">
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" onclick="calc()" class="btn btn-danger">Calcular</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-footer">
+                            <h5 id="H5Calc"> . . . </h5>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                1. Média
+                            </h5>
+                            <form>
+                                <div class="form-group">
+                                    <input id="inputN1" class="form-control" placeholder="Digite a primeira nota">
+                                </div>
+                                <div class="form-group">
+                                    <input id="inputN2" class="form-control" placeholder="Digite a segunda nota">
+                                </div>
+                                <div class="form-group">
+                                    <input id="inputN3" class="form-control" placeholder="Digite a terceira nota">
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" onclick="calcMedia()" class="btn btn-danger">Calcular</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-footer">
+                            <h5 id="H5Med"> . . . </h5>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                2. Classificação Idade
+                            </h5>
+                            <form>
+                                <div class="form-group">
+                                    <input id="inputIdadeN" class="form-control" placeholder="Digite sua idade">
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" onclick="classIdade()"
+                                        class="btn btn-danger">Classificar</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-footer">
+                            <h5 id="H5IdadeN"> . . . </h5>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                3. Calcular Tabuada
+                            </h5>
+                            <form>
+                                <div class="form-group">
+                                    <input id="inputNum" class="form-control" placeholder="Digite um numero">
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" onclick="calcTab()" class="btn btn-danger">Calcular</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="H5tabuada" class="card-footer">
+
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                4. Pódio
+                            </h5>
+                            <form>
+                                <div class="form-group">
+                                    <input id="inputT1" class="form-control" placeholder="Participante - Tempo">
+                                </div>
+                                <div class="form-group">
+                                    <input id="inputT2" class="form-control" placeholder="Participante - Tempo">
+                                </div>
+                                <div class="form-group">
+                                    <input id="inputT3" class="form-control" placeholder="Participante - Tempo">
+                                </div>
+                                <div class="form-group">
+                                    <button type="button" onclick="classTempo()"
+                                        class="btn btn-danger">Classificar</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="H5podio" class="card-footer">
+
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                5. Calcular M²
+                            </h5>
+                            <form>
+                                <div class="form-group">
+                                    <input id="inputL" class="form-control" placeholder="Largura">
+                                </div>
+                                <div class="form-group">
+                                    <input id="inputA" class="form-control" placeholder="Altura">
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="button" onclick="calcM2()" class="btn btn-danger">Calcular</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-footer">
+                            <h5 id=H5m2> . . . </h5>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                6. Calcular Juros
+                            </h5>
+                            <form>
+                                <div class="form-group">
+                                    <input id="inputVal" class="form-control" placeholder="Valor">
+                                </div>
+                                <div class="form-group">
+                                    <input id="inputAtras" class="form-control" placeholder="Dias de atraso">
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="button" onclick="calcJuros()" class="btn btn-danger">Calcular</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-footer">
+                            <h5 id=H5juros> . . . </h5>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                7. Positivo, Negativo ou Neutro
+                            </h5>
+                            <form>
+
+                                <div class="form-group">
+                                    <input id="inputNumber" class="form-control" placeholder="Numero inteiro">
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="button" onclick="classNumb()"
+                                        class="btn btn-danger">Classificar</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-footer">
+                            <h5 id=H5number> . . . </h5>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                8. Numero Menor
+                            </h5>
+                            <form>
+                                <div class="form-group">
+                                    <input id="inputNum1" class="form-control" placeholder="Numero inteiro 1">
+                                </div>
+                                <div class="form-group">
+                                    <input id="inputNum2" class="form-control" placeholder="Numero inteiro 2">
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="button" onclick="calcMenor()" class="btn btn-danger">Calcular</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-footer">
+                            <h5 id=H5menor> . . . </h5>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                9. Somas Estranhas
+                            </h5>
+                            <form>
+                                <div class="form-group">
+                                    <input id="inputNumb1" class="form-control" placeholder="Numero 1º">
+                                </div>
+                                <div class="form-group">
+                                    <input id="inputNumb2" class="form-control" placeholder="Numero 2º">
+                                </div>
+                                <div class="form-group">
+                                    <input id="inputNumb3" class="form-control" placeholder="Numero 3º">
+                                </div>
+                                <div class="form-group">
+                                    <input id="inputNumb4" class="form-control" placeholder="Numero 4º">
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="button" onclick="calcSomas()" class="btn btn-danger">Calcular</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-footer">
+                            <h5 id=H5somas> . . . </h5>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                10. Idade em Dias
+                            </h5>
+                            <form>
+                                <div class="form-group">
+                                    <input id="inputAno" class="form-control" placeholder="Anos de Idade">
+                                </div>
+                                <div class="form-group">
+                                    <input id="inputMes" class="form-control" placeholder="Meses de Idade">
+                                </div>
+                                <div class="form-group">
+                                    <input id="inputDia" class="form-control" placeholder="Dias de Idade">
+                                </div>
+
+
+                                <div class="form-group">
+                                    <button type="button" onclick="calcDias()" class="btn btn-danger">Calcular</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-footer">
+                            <h5 id=H5dias> . . . </h5>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                11. Criar Álbum
+                            </h5>
+                            <form>
+                                <div class="form-group">
+                                    <button type="button" onclick="vetImg()" class="btn btn-danger">Criar</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-footer" id="divImg">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <script>
+        function start() {
+            var curso = "Sistemas de Informação";
+            var disciplina = "Fundamentos do Desenvolvimento WEB";
+            var periodo = 2;
+
+            console.log(curso);
+
+            alert(disciplina);
+        }
+
+        function idade() {
+            let anoAtual = 2021;
+            let anoNascimento = parseInt(document.getElementById("inputIdade").value);
+
+
+            if (Number.isInteger(anoNascimento)) {
+                let idade = anoAtual - anoNascimento;
+                document.getElementById("H5Idade").innerHTML = idade + " Anos.";
+
+            }
+            else {
+                alert("Insira o ano de seu nascimento");
+                document.getElementById("H5Idade").innerHTML = "Ano inválido!";
+            }
+
+
+        }
+        var n = 0;
+
+        function criarBtn() {
+
+            for (i = n; i < (n + 10); i++) {
+                let b = document.createElement("button");
+                b.className = "btn btn-success";
+                b.style = "margin: 3px";
+                b.innerHTML = i;
+
+                document.getElementById("divBtn").appendChild(b);
+
+            }
+            n = i;
+        }
+
+        function calc() {
+            val1 = parseInt(document.getElementById("inputVal1").value);
+            val2 = parseInt(document.getElementById("inputVal2").value);
+            op = document.getElementById("op").value;
+
+            if (isNaN(val1) || isNaN(val2)) {
+                document.getElementById("H5Calc").innerHTML = "Valor inválido!";
+            }
+            else {
+                let res;
+                switch (op) {
+                    case "+":
+                        res = val1 + val2;
+                        break;
+                    case "-":
+                        res = val1 - val2;
+                        break;
+                    case "*":
+                        res = val1 * val2;
+                        break;
+                    case "/":
+                        res = val1 / val2;
+                        break;
+                }
+                document.getElementById("H5Calc").innerHTML = res;
+
+
+            }
+
+
+
+        }
+
+        function calcMedia() {
+            let n1 = parseFloat(document.getElementById("inputN1").value);
+            let n2 = parseFloat(document.getElementById("inputN2").value);
+            let n3 = parseFloat(document.getElementById("inputN3").value);
+
+            let med = (n1 + n2 + n3) / 3;
+            let res;
+
+
+
+            if (isNaN(n1) || isNaN(n2) || isNaN(n3)) {
+                document.getElementById("H5Med").innerHTML = "Valor inválido";
+            }
+            else {
+                if (med >= 6) {
+                    res = ", Aprovado";
+                    document.getElementById("H5Med").innerHTML = med + res;
+
+                }
+                else {
+                    res = ", Reprovado"
+                    document.getElementById("H5Med").innerHTML = med + res
+
+
+
+                }
+            }
+
+
+        }
+
+        function classIdade() {
+            let idade = document.getElementById("inputIdadeN").value;
+            let Classi;
+
+            if (idade >= 18) {
+                Classi = "Adulto";
+            }
+            else if (idade >= 14) {
+                Classi = "Adolescente";
+            }
+            else if (idade >= 8) {
+                Classi = "Juvenil";
+            }
+            else if (idade >= 5) {
+                Classi = "Infantil";
+            }
+            else {
+                Classi = "Sem categoria"
+            }
+
+            document.getElementById("H5IdadeN").innerHTML = Classi;
+
+
+
+        }
+
+        function calcTab() {
+
+            let num = document.getElementById("inputNum").value;
+            let i;
+
+
+            for (i = 0; i <= 10; i++) {
+
+                resnum = num * i;
+                let res = document.createElement("h5");
+                res.innerHTML = i + " x " + num + " = " + resnum;
+
+                document.getElementById("H5tabuada").appendChild(res);
+
+
+
+            }
+
+
+
+        }
+
+        function classTempo() {
+            let tempo = [0, 0, 0];
+            tempo[0] = parseFloat(document.getElementById("inputT1").value);
+            tempo[1] = parseFloat(document.getElementById("inputT2").value);
+            tempo[2] = parseFloat(document.getElementById("inputT3").value);
+
+            let podio = ["Primeiro: ", "Segundo: ", "Terceiro: "];
+
+            let aux;
+            let i, j;
+
+            for (i = 0; i < 3; i++) {
+
+                for (j = i + 1; j < 3; j++) {
+                    if (tempo[i] > tempo[j]) {
+                        aux = tempo[i];
+                        tempo[i] = tempo[j];
+                        tempo[j] = aux;
+                    }
+                }
+            }
+
+            for (i = 0; i < 3; i++) {
+                let podiotext = document.createElement("h5");
+                podiotext.innerHTML = podio[i] + tempo[i];
+                document.getElementById("H5podio").appendChild(podiotext);
+            }
+        }
+
+        function calcM2() {
+            let larg = parseFloat(document.getElementById("inputL").value);
+            let alt = parseFloat(document.getElementById("inputA").value);
+            let m2;
+
+            m2 = larg * alt;
+
+            document.getElementById("H5m2").innerHTML = m2 + " m²"
+        }
+
+        function calcJuros() {
+            let valor = document.getElementById("inputVal").value;
+            let dias = document.getElementById("inputAtras").value;
+            let juros = valor * (dias * 0.02);
+            let valortot = parseFloat(juros) + parseFloat(valor);
+
+            document.getElementById("H5juros").innerHTML = ("Valor: R$" + valor + " + " + "Juros: R$" + juros + " = R$" + valortot)
+        }
+
+        function classNumb() {
+
+            let num = document.getElementById("inputNumber").value;
+            let tipo;
+
+            if (num > 0) {
+                tipo = "Positivo."
+
+            }
+            else if (num < 0) {
+                tipo = "Negativo."
+            }
+            else {
+                tipo = "Neutro."
+            }
+
+            document.getElementById("H5number").innerHTML = tipo;
+
+
+        }
+
+        function calcMenor() {
+
+            let num1 = document.getElementById("inputNum1").value;
+            let num2 = document.getElementById("inputNum2").value;
+            let menor;
+
+            if (num1 > num2) {
+                menor = num2;
+            }
+            else if (num2 > num1) {
+                menor = num1;
+
+            }
+            else {
+                menor = "Numeros Iguais."
+            }
+
+            document.getElementById("H5menor").innerHTML = menor;
+
+        }
+
+        function calcSomas() {
+
+            let numb1 = parseFloat(document.getElementById("inputNumb1").value);
+            let numb2 = parseFloat(document.getElementById("inputNumb2").value);
+            let numb3 = parseFloat(document.getElementById("inputNumb3").value);
+            let numb4 = parseFloat(document.getElementById("inputNumb4").value);
+
+            let result;
+
+            if ((numb1 + numb2) > (numb3 + numb4)) {
+                result = "Numero 1º e Numero 2º são maiores.";
+            }
+            else if ((numb1 + numb2) < (numb3 + numb4)) {
+                result = "Numero 3º e Numero 4 são maiores.";
+            }
+            else {
+                result = "Resultado igual.";
+            }
+
+            document.getElementById("H5somas").innerHTML = result;
+
+        }
+
+        function calcDias() {
+
+            let ano = parseFloat(document.getElementById("inputAno").value);
+            let mes = parseFloat(document.getElementById("inputMes").value);
+            let dia = parseFloat(document.getElementById("inputDia").value);
+
+            let dias = (dia + (mes * 30) + (ano * 365));
+
+            document.getElementById("H5dias").innerHTML = (dias + " Dias.");
+        }
+
+        function vetImg() {
+            let vetor = ["", "", "", "", "", "", "", "", "", ""];
+
+
+            vetor[0] = "./images/img1.png";
+            vetor[1] = "./images/img2.png";
+            vetor[2] = "./images/img3.jpg";
+            vetor[3] = "./images/img4.jpg";
+            vetor[4] = "./images/img5.png";
+            vetor[5] = "./images/img6.jpg";
+            vetor[6] = "./images/img7.png";
+            vetor[7] = "./images/img8.jpg";
+            vetor[8] = "./images/img9.png";
+            vetor[9] = "./images/img10.jpg";
+
+            for (i = 0; i < 10; i++) {
+                let image = document.createElement("img");
+                image.style = "width: 100px; margin: 3px";
+                image.className = "img-thumbnail"
+                image.src = vetor[i];
+
+                document.getElementById("divImg").appendChild(image);
+
+            }
+
+
+
+
+
+        }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
